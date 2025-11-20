@@ -1,0 +1,931 @@
+/*
+ * style.css - Program Studi Sistem Informasi FMIPA UNTAN
+ * Versi: 3.2 | Tanggal: 20/11/2025 (Final Update Profil Tabs)
+ */
+
+/* ================================================= */
+/* 🚀 1. RESET DASAR & TATA LETAK UMUM */
+/* ================================================= */
+
+body, h1, h2, h3, p, ul, ol, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6; /* Warna latar belakang umum */
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ================================================= */
+/* 📞 2. TOP BAR (KONTAK & SOSIAL MEDIA) */
+/* ================================================= */
+
+#top-bar {
+    background-color: #f8f9fa; /* Warna sangat terang */
+    padding: 10px 0;
+    font-size: 0.9em;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+#top-bar .container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+#top-bar .contact-info span {
+    margin-right: 15px;
+}
+
+/* Catatan: #007bff digunakan sebagai warna aksen kedua (Aksen Biru) */
+#top-bar .contact-info i {
+    color: #007bff; 
+    margin-right: 5px;
+}
+
+.social-icons a {
+    color: #555;
+    margin-left: 15px;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+/* ================================================= */
+/* 🏛️ 3. HEADER & NAVIGASI UTAMA */
+/* ================================================= */
+
+header {
+    background-color: #332d67; /* Biru Primer */
+    color: white;
+    padding: 6px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; /* Pisahkan Logo/Judul dan Navigasi/Search */
+    align-items: center;
+    flex-wrap: wrap; 
+    padding: 10px 0;
+    gap: 20px; /* Jarak antar elemen utama di header container */
+}
+
+.logo-group {
+    display: flex; 
+    align-items: center; 
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 1.5em; /* Disesuaikan dari inline style */
+    color: white;
+}
+
+/* CONTAINER BARU UNTUK MENGGABUNGKAN NAVIGASI DAN SEARCH BOX */
+.nav-search-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Jarak antara navigasi utama dan search box */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    font-weight: 500;
+    padding: 8px 10px; 
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Link Aktif pada Navigasi Utama */
+.active-link {
+    background-color: #004c99 !important; 
+    border-bottom: 3px solid #ffc107; /* Kuning Sekunder */
+    padding-bottom: 5px !important; 
+}
+
+
+/* ================================================= */
+/* 🔍 4. SEARCH BOX */
+/* ================================================= */
+
+.search-box input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    width: 120px; 
+}
+
+.search-box button {
+    padding: 5px 10px;
+    background-color: #007bff; /* Aksen Biru */
+    color: white;
+    border: 1px solid #007bff;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #0056b3;
+}
+
+/* ================================================= */
+/* 🚀 5. HERO SECTION (Selamat Datang) */
+/* ================================================= */
+
+.hero {
+    background-size: cover; 
+    background-position: center center; 
+    color: white; 
+    padding: 100px 0; 
+    text-align: center;
+    position: relative; 
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay gelap 50% untuk teks lebih jelas */
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative; 
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 3.5em; 
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+.hero p {
+    font-size: 1.3em;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); 
+}
+
+/* ================================================= */
+/* 📦 6. INFO BERANDA SECTION */
+/* ================================================= */
+
+#info-beranda {
+    padding: 60px 0;
+    background-color: #f8f8f8;
+}
+
+#info-beranda .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-card {
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffc107;
+    padding-bottom: 10px;
+}
+
+.info-card h3 {
+    color: #007bff; 
+    margin-bottom: 10px;
+}
+
+.info-card ul {
+    margin-top: 10px;
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+.info-cards-row {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; 
+}
+
+.info-cards-row > div { 
+    flex: 1; 
+    min-width: 300px; 
+}
+
+/* Helper classes for info-card borders in index.html */
+.info-card.border-left-blue {
+    border-left: 5px solid #007bff;
+    padding: 25px; 
+}
+
+.info-card.border-left-yellow {
+    border-left: 5px solid #ffc107;
+    padding: 25px; 
+}
+
+
+/* ================================================= */
+/* 👤 7. PROFILE CONTENT LAYOUT & SIDEBAR */
+/* ================================================= */
+
+.profile-section {
+    padding: 30px 0 60px 0; 
+}
+
+.breadcrumb {
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+
+.profile-layout {
+    display: flex; 
+    gap: 30px;
+    text-align: left;
+}
+
+.profile-sidebar {
+    flex: 1; 
+    min-width: 250px; 
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+    height: fit-content;
+}
+
+.profile-sidebar h3 {
+    color: #007bff;
+    border-bottom: 2px solid #eee; 
+    padding-bottom: 10px; 
+    margin-bottom: 15px;
+}
+
+.profile-content-area {
+    flex: 3; 
+    min-height: 500px;
+}
+
+/* Style untuk Sidebar Menu */
+.sidebar-menu {
+    list-style: none; 
+    padding: 0;
+}
+.sidebar-menu a {
+    display: block;
+    padding: 10px 0;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+.sidebar-menu a:hover, .sidebar-menu a.current {
+    background-color: #332d67; /* Biru Primer */
+    color: white;
+    padding-left: 10px;
+}
+.sidebar-menu a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Konten Utama Artikel */
+.profile-content-area article {
+    padding: 25px; 
+    border-radius: 8px; 
+    background-color: #fff;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.profile-content-area h2 {
+    color: #007bff; 
+    border-bottom: 3px solid #ffc107; 
+    padding-bottom: 10px; 
+    margin-bottom: 30px;
+}
+.profile-content-area h3 {
+    color: #007bff; 
+    margin-bottom: 15px;
+}
+
+/* ➡️ ATURAN KUNCI UNTUK FUNGSI TAB: HIDE/SHOW CONTENT */
+.profile-content-area .content-section {
+    display: none; /* Sembunyikan semua konten secara default */
+}
+
+.profile-content-area .active-content {
+    display: block !important; /* Tampilkan hanya konten yang aktif */
+}
+
+/* Opsional: Sembunyikan HR yang tidak diperlukan lagi karena konten sudah terpisah */
+.profile-content-area hr {
+    display: none;
+}
+/* ⬅️ END: ATURAN KUNCI UNTUK FUNGSI TAB */
+
+/* Styling untuk Visi & Misi Boxes */
+.vision-box {
+    margin-bottom: 40px; 
+    padding: 25px; 
+    border-radius: 8px; 
+    border-left: 5px solid #007bff; 
+    background-color: #f0f8ff;
+}
+
+.mission-box {
+    padding: 25px; 
+    border-radius: 8px; 
+    border-left: 5px solid #ffc107; 
+    background-color: #fffaf0;
+}
+
+/* 🆕 TAMBAHAN STYLING UNTUK Sidebar Kontak */
+.contact-sidebar .social-icons-sidebar {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.contact-sidebar .social-icons-sidebar a {
+    font-size: 1.8em;
+    margin: 0 10px;
+    color: #332d67; /* Warna utama untuk sidebar social */
+    transition: color 0.3s;
+}
+
+.contact-sidebar .social-icons-sidebar a:hover {
+    color: #ffc107;
+}
+
+/* Styling untuk Akreditasi Download */
+.akreditasi-download {
+    text-align: center;
+    padding: 30px;
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.akreditasi-download i.fa-file-pdf {
+    font-size: 3em;
+    color: #dc3545; /* Merah untuk PDF */
+    margin-bottom: 15px;
+}
+
+.btn-download {
+    display: inline-block;
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+    background-color: #c82333;
+}
+
+
+/* ================================================= */
+/* 👨‍🏫 8. DOSEN & STAF GRID */
+/* ================================================= */
+
+.dosen-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px; 
+    margin-top: 20px;
+}
+
+.dosen-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    min-height: 320px; 
+    transition: transform 0.2s;
+}
+.dosen-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dosen-card .profile-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background-color: #f0f0f0; 
+    border: 3px solid #007bff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dosen-card .profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dosen-card .nama-dosen {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.dosen-card .jabatan-dosen {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.dosen-card .social-icons-dosen a {
+    color: #007bff; 
+    font-size: 1.5em;
+    margin: 0 8px;
+    transition: color 0.2s ease;
+}
+
+.dosen-card .social-icons-dosen a:hover {
+    color: #0056b3;
+}
+
+/* Specific social colors */
+.dosen-card .social-icons-dosen .fa-google { color: #db4437; }
+.dosen-card .social-icons-dosen .fa-linkedin { color: #0077b5; }
+.dosen-card .social-icons-dosen .fa-github { color: #333; }
+.dosen-card .social-icons-dosen .fa-newspaper { color: #777; }
+.dosen-card .social-icons-dosen .fa-facebook-f { color: #3b5998; }
+.dosen-card .social-icons-dosen .fa-instagram { color: #E1306C; }
+
+
+/* ================================================= */
+/* 🦶 9. FOOTER */
+/* ================================================= */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* ================================================= */
+/* 9. UTILITY CLASSES & GENERAL SECTIONS */
+/* ================================================= */
+
+.section-padding {
+    padding: 60px 0;
+}
+.background-white {
+    background-color: #fff;
+}
+.background-light {
+    background-color: #f8f8f8;
+}
+
+.section-title {
+    text-align: center;
+    color: #332d67; /* Biru Primer */
+    margin-bottom: 10px;
+    font-size: 2em;
+    padding-bottom: 5px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+
+/* ================================================= */
+/* 🆕 10. FOKUS KEAHLIAN (Expertise) */
+/* ================================================= */
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.expertise-card {
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.expertise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.expertise-icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.expertise-card h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Warna Keahlian */
+.blue-text { color: #007bff; }
+.yellow-text { color: #ffc107; }
+.green-text { color: #28a745; }
+
+
+/* ================================================= */
+/* 🆕 11. VIDEO PROFIL & STATISTIK */
+/* ================================================= */
+
+.video-stats-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start; /* Sejajarkan di bagian atas */
+}
+
+.video-card {
+    flex: 2; /* Video ambil 2/3 ruang */
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.stats-card {
+    flex: 1; /* Statistik ambil 1/3 ruang */
+    background-color: #332d67; /* Warna latar belakang primer */
+    color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 300px; /* Tinggi video placeholder */
+    background-color: #e9ecef;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 4em;
+    color: #dc3545; /* Merah untuk logo YouTube */
+}
+
+.video-description {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn-subscribe {
+    display: inline-block;
+    background-color: #dc3545; /* Merah YouTube */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-subscribe:hover {
+    background-color: #c82333;
+}
+
+
+/* Statistik Grid */
+.stats-card h3 {
+    color: white;
+    border-bottom: 2px solid #ffc107;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-icon {
+    font-size: 2em;
+    color: #ffc107;
+    margin-bottom: 5px;
+}
+
+.stat-number {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* ================================================= */
+/* 📱 12. RESPONSIVENESS (Media Queries) */
+/* ================================================= */
+
+/* Untuk layar desktop/lebar (1200px ke bawah) - Penyesuaian Navigasi */
+@media (max-width: 1200px) {
+    header .container {
+        flex-wrap: wrap;
+    }
+    header nav ul li a {
+        padding: 5px 8px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Sesuaikan tata letak profil di tablet */
+    .profile-layout {
+        flex-direction: column;
+    }
+    .profile-sidebar {
+        min-width: 100%; /* Sidebar mengambil lebar penuh */
+    }
+
+    /* Penyesuaian layout info beranda */
+    .info-cards-row {
+        flex-direction: column; 
+    }
+    .info-cards-row > div {
+        min-width: unset; 
+        width: 100%;
+    }
+    
+    /* Penyesuaian Video/Stats */
+    .video-stats-layout {
+        flex-direction: column; /* Tumpuk video dan statistik di tablet */
+    }
+    .video-card, .stats-card {
+        flex: unset; 
+        width: 100%;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr); /* Tiga kolom untuk statistik di tablet */
+    }
+}
+
+
+@media (max-width: 768px) {
+    
+    /* Header & Navigasi Responsive */
+    header .container {
+        flex-direction: row; 
+        justify-content: space-between;
+    }
+    
+    .nav-search-wrapper {
+        width: 100%; 
+        justify-content: space-between;
+        margin-top: 10px;
+        order: 4; 
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 10px;
+        gap: 10px; 
+    }
+
+    header nav {
+        width: auto;
+    }
+    
+    header nav ul {
+        justify-content: space-around;
+        flex-grow: 1; 
+    }
+
+    .search-box {
+        margin-left: 0; 
+    }
+    
+    /* Top Bar Responsive */
+    #top-bar .container {
+        flex-direction: column;
+        gap: 5px;
+    }
+    #top-bar .contact-info span {
+        display: block;
+        margin-right: 0;
+        text-align: center;
+    }
+    .social-icons {
+        margin-top: 5px;
+    }
+    
+    /* Hero Section Responsive */
+    .hero h2 {
+        font-size: 2.5em; 
+    }
+    .hero p {
+        font-size: 1.1em;
+    }
+    
+    /* Dosen Grid Responsive */
+    .dosen-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    /* Penyesuaian untuk bagian baru */
+    .expertise-grid {
+        grid-template-columns: 1fr; /* Satu kolom untuk keahlian di mobile */
+    }
+    .stats-grid {
+        grid-template-columns: 1fr; /* Satu kolom untuk statistik di mobile */
+    }
+    .video-placeholder {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dosen-grid {
+        grid-template-columns: 1fr; 
+    }
+    .dosen-card {
+        padding: 20px 15px;
+    }
+    header h1 {
+        font-size: 1.3em;
+    }
+    .hero {
+        padding: 80px 0;
+    }
+    .hero h2 {
+        font-size: 2em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+}
+
+/* Tambahkan ke style.css Anda */
+.mk-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    text-align: left;
+    font-size: 0.95em;
+}
+
+.mk-table th, .mk-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.mk-table thead tr {
+    background-color: #f479a4; /* Warna pink dari gambar */
+    color: white;
+}
+
+.mk-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.total-row {
+    font-weight: bold;
+    background-color: #e0f7fa !important; /* Warna biru muda untuk baris total */
+    border-top: 2px solid #332d67;
+}
+
+.total-row td:last-child {
+    text-align: center;
+}
+
+.focus-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.focus-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #312E81;
+    margin-bottom: 35px;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.focus-card {
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    transition: 0.25s;
+}
+
+.focus-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.09);
+}
+
+.focus-icon {
+    font-size: 55px;
+    margin-bottom: 18px;
+}
+
+.focus-heading {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1F2937;
+}
+
+.focus-text {
+    font-size: 20px;
+    color: #4B5563;
+    font-weight: 500;
+}
